@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h1><span style="font-size: 2em">Drakkar</span></h1>
+
+{% for page2 in site.pages %}
+    {% if page2.layout == 'issue' %}
+
+        {% assign number = page2.dir | replace: '/', '' %}
+
+        <h2>Číslo {{ number }}</h2>
+
+        <a href="{{ page2.url }}">Stránka čísla</a>
+        {% for page3 in site.pages %}
+            {% if page3.dir == page2.dir and page3.layout == 'article' %}
+                | <a href="{{ page3.url }}">{{ page3.title }}</a>
+            {% endif %}
+        {% endfor %}
+
+    {% endif %}
+{% endfor %}
