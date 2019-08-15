@@ -5,15 +5,13 @@ layout: default
 <h1><span style="font-size: 2em">Drakkar</span></h1>
 
 {% assign issues = site.pages | where: 'layout', 'issue' | sort: 'number' | reverse %}
-{% assign articles = site.pages | where: 'layout', 'article' %}
-
 {% for issue in issues %}
         <h2>Číslo {{ issue.number }}</h2>
 
         <a href="{{ issue.url }}">Stránka čísla</a>
+
+        {% assign articles = site.pages | where: 'dir', issue.dir | where: 'layout', 'article' %}
         {% for article in articles %}
-            {% if article.dir == issue.dir %}
-                | <a href="{{ article.url }}">{{ article.title }}</a>
-            {% endif %}
+            | <a href="{{ article.url }}">{{ article.title }}</a>
         {% endfor %}
 {% endfor %}

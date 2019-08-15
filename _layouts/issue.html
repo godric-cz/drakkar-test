@@ -6,16 +6,11 @@ layout: default
 
 <h1>Drakkar #{{ page.dir | replace: '/', '' }}</h1>
 
-{% for site_page in site.pages %}
-    {% if site_page.dir == page.dir and site_page.layout == 'article' %}
-
-        {% assign article = site_page %}
-
-        <h2>{{ article.title }}</h2>
-        <a href="{{ article.url }}">{{ article.url }}</a>
-        <div>
-            {{ article.content | truncatewords: 40 }}
-        </div>
-
-    {% endif %}
+{% assign articles = site.pages | where: 'dir', page.dir | where: 'layout', 'article' %}
+{% for article in articles %}
+    <h2>{{ article.title }}</h2>
+    <a href="{{ article.url }}">{{ article.url }}</a>
+    <div>
+        {{ article.content | truncatewords: 40 }}
+    </div>
 {% endfor %}
