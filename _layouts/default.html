@@ -17,6 +17,20 @@
             border-left: solid #eee 12px;
         }
     </style>
+    <script>
+        // TODO debug
+        {% if site.url == 'https://godric-cz.github.io' %}
+        window.addEventListener('load', () => {
+            for (var i = 0; i < document.links.length; i++) {
+                let link = document.links[i]
+                let href = link.getAttribute('href')
+                if (href[0] == '/') {
+                    link.setAttribute('href', '/drakkar-test' + href) // TODO debug hack
+                }
+            }
+        })
+        {% endif %}
+    </script>
 </head>
 <body>
 
