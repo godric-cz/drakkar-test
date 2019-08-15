@@ -4,19 +4,16 @@ layout: default
 
 <h1><span style="font-size: 2em">Drakkar</span></h1>
 
-{% for page2 in site.pages %}
-    {% if page2.layout == 'issue' %}
+{% assign issues = site.pages | where: 'layout', 'issue' | sort: 'number' | reverse %}
+{% assign articles = site.pages | where: 'layout', 'article' %}
 
-        {% assign number = page2.dir | replace: '/', '' %}
+{% for issue in issues %}
+        <h2>Číslo {{ issue.number }}</h2>
 
-        <h2>Číslo {{ number }}</h2>
-
-        <a href="{{ page2.url }}">Stránka čísla</a>
-        {% for page3 in site.pages %}
-            {% if page3.dir == page2.dir and page3.layout == 'article' %}
-                | <a href="{{ page3.url }}">{{ page3.title }}</a>
+        <a href="{{ issue.url }}">Stránka čísla</a>
+        {% for article in articles %}
+            {% if article.dir == issue.dir %}
+                | <a href="{{ article.url }}">{{ article.title }}</a>
             {% endif %}
         {% endfor %}
-
-    {% endif %}
 {% endfor %}
