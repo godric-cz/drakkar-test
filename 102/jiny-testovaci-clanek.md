@@ -4,7 +4,7 @@ title: Jiný testovací článek
 published: true
 ---
 
-<p style="font-family: 'Times New Roman';">Náhražka perexu, která musí mít aspoň minimální délku, abych na ní mohl vyzkoušet, jak a jestli fungují HTML tagy. Ano, budu v tom zkoušet psí kusy (ale neměl bych nic rozbít). Hm, evidentně musím uzavírat &lt;p&gt; tagy... Nevadí... a jete pokus: *<p*>*<*/p*></p>
+<p style="font-family: 'Times New Roman';">Náhražka perexu, která musí mít aspoň minimální délku, abych na ní mohl vyzkoušet, jak a jestli fungují HTML tagy. Ano, budu v tom zkoušet psí kusy (ale neměl bych nic rozbít). Hm, evidentně musím uzavírat &lt;p&gt; tagy... Nevadí... a ješte pokus: *<*/p*>X*<p*></p>
 
 ### Cesta k tvrzi a k průsmyku
 Po cestě z vesnice k tvrzi je velký statek s výběhem pro koně a maštalemi, bydlí zde také část zemanova služebnictva.
