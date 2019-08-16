@@ -4,7 +4,8 @@ title: Jiný testovací článek
 published: true
 ---
 
-<p style="font-family: 'Times New Roman';">Náhražka perexu, která musí mít aspoň minimální délku, abych na ní mohl vyzkoušet, jak a jestli fungují HTML tagy. Ano, budu v tom zkoušet psí kusy (ale neměl bych nic rozbít). Hm, evidentně musím uzavírat &lt;p&gt; tagy... Nevadí... a ješte pokus: \# abcdef \</p> pqrst \<p> XYZ </p>
+<p style="font-family: 'Times New Roman';">Náhražka perexu, která musí mít aspoň minimální délku, abych na ní mohl vyzkoušet, jak a jestli fungují HTML tagy. Ano, budu v tom zkoušet psí kusy (ale neměl bych nic rozbít). Hm, evidentně musím uzavírat &lt;p&gt; tagy... Nevadí... a ješte pokus:<br />
+\# abcdef \</p> pqrst \<p> XYZ </p>
 
 <div>asdfghj</div>
 
